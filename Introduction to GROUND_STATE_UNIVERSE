@@ -1,0 +1,341 @@
+Tematicas clave dentro del proyecto de investigación "quantum-causal-sets"
+
+Conjuntos Causales
+        ↓
+Espacio-tiempo Emergente
+        ↓
+Campo Cuántico
+        ↓
+Vacío Cuántico
+        ↓
+Correlaciones
+        ↓
+Detectores
+        ↓
+Observables
+
+Objetivo: Crear un repositorio siguiendo la estructura siguiente:
+
+├── detectors/
+│   ├── unruh_dewitt.qs
+│   └── entanglement_harvesting.qs
+│
+├── vacuum/
+│   ├── wightman.py
+│   └── flrw.py
+│
+├── causal_sets/
+│   ├── sprinkling.py
+│   └── causet_graph.py
+│
+└── qsharp/
+    ├── detector.qs
+    └── lattice_field.qs
+
+A continuación se presenta el desarrollo conceptual del proyecto.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Detectors: Esta carpeta contiene los "observadores" del universo.
+
+Los detectores son los instrumentos que nos permiten preguntar:
+
+¿Qué percibe un observador inmerso en un determinado vacío?
+
+
+unruh_dewitt.qs
+Objetivo
+
+Implementar un detector de dos niveles.
+
+|0⟩ = estado base
+|1⟩ = estado excitado
+
+
+Pregunta problema:
+¿Puede un detector excitarse debido únicamente a las fluctuaciones del vacío?
+
+Entradas
+Correlador de Wightman
+Gap energético Ω
+Acoplamiento λ
+Tiempo de interacción
+Salidas
+Probabilidad de excitación
+Tasa de transición
+Distribución de eventos
+Futuro
+
+Permitir estudiar:
+
+Efecto Unruh
+Radiación Hawking
+Vacío de Bunch-Davies
+Cosmología cuántica
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+entanglement_harvesting.qs
+Objetivo
+
+Estudiar si dos detectores pueden extraer entrelazamiento del vacío.
+
+Idea
+
+Dos detectores inicialmente separados:
+
+A -------- B
+
+sin interacción directa.
+
+El único medio común es:
+
+Vacío Cuántico
+Pregunta científica
+
+¿Puede el vacío actuar como un recurso de información cuántica?
+
+Entradas
+Separación espacial
+Tiempo de interacción
+Correladores
+Salidas
+Concurrence
+Negativity
+Mutual Information
+Relevancia
+
+Este módulo conecta:
+
+Vacío
+↓
+Información Cuántica
+↓
+Estructura Causal
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📂 vacuum/
+
+Esta carpeta representa la física del campo.
+
+wightman.py
+Objetivo
+
+Calcular las correlaciones fundamentales del vacío.
+
+Implementa
+G
++
+(x,x
+′
+)=⟨0∣ϕ(x)ϕ(x
+′
+)∣0⟩
+Pregunta científica
+
+¿Cómo están correlacionadas las fluctuaciones cuánticas entre dos eventos?
+
+Entradas
+Coordenadas espacio-temporales
+Trayectorias
+Tipo de vacío
+Salidas
+Correladores
+Funciones respuesta
+Espectros
+Es el núcleo matemático del proyecto
+
+Prácticamente todos los demás módulos dependen de él.
+
+flrw.py
+Objetivo
+
+Construir el espacio-tiempo cosmológico.
+
+Implementa
+ds
+2
+=−dt
+2
++a
+2
+(t)d
+x
+2
+Pregunta científica
+
+¿Cómo modifica la expansión del universo las fluctuaciones cuánticas?
+
+Entradas
+Ωm
+Ωr
+ΩΛ
+H0
+Salidas
+Factor de escala
+Tiempo conforme
+Horizonte
+Distancias cosmológicas
+Rol
+
+Proporcionar el fondo geométrico sobre el que vive el campo cuántico.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📂 causal_sets/
+
+Aquí comienza la parte más experimental y ambiciosa.
+
+sprinkling.py
+Objetivo
+
+Generar espacio-tiempo discreto.
+
+Idea
+
+En lugar de una variedad continua:
+
+██████████
+
+se generan eventos:
+
+• • • • •
+ • • • •
+• • • • •
+
+mediante un proceso de Poisson.
+
+Pregunta científica
+
+¿Qué ocurre si el espacio-tiempo está compuesto por eventos discretos?
+
+Entradas
+Volumen
+Dimensión
+Densidad
+Salidas
+Conjunto de eventos
+Coordenadas
+Interpretación
+
+Cada punto es un posible "átomo de espacio-tiempo".
+
+causet_graph.py
+Objetivo
+
+Construir la red causal.
+
+A partir de
+Eventos
+
+determinar:
+
+A → B
+
+si B puede ser influenciado causalmente por A.
+
+Pregunta científica
+
+¿Puede la causalidad contener toda la información geométrica?
+
+Salidas
+Grafo dirigido
+Matrices de adyacencia
+Intervalos causales
+Futuras métricas
+Dimensión efectiva
+Curvatura discreta
+Entropía causal
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📂 qsharp/
+
+Esta carpeta es el puente entre la física y la computación cuántica.
+
+detector.qs
+Objetivo
+
+Implementar detectores genéricos.
+
+No conoce cosmología.
+
+No conoce conjuntos causales.
+
+Sólo sabe:
+
+Tengo una probabilidad de transición.
+
+y la convierte en:
+
+Circuito cuántico.
+Función
+
+Traducir:
+
+P
+exc
+	​
+
+
+en:
+
+Ry(θ)
+
+para poder ejecutar simulaciones.
+
+lattice_field.qs
+Objetivo
+
+Representar un campo cuántico discretizado.
+
+Idea
+
+Cada qubit representa:
+
+Modo
+Celda espacial
+Grado de libertad
+
+Ejemplo:
+
+q0 q1 q2 q3 q4
+Pregunta científica
+
+¿Puede un campo cuántico emerger de una red discreta de qubits?
+
+Capacidades futuras
+Evolución temporal
+Entrelazamiento
+Propagación de excitaciones
+Estados fundamentales
+La visión de largo plazo
+
+Si algún día COSMAI madura esta línea, la arquitectura completa podría verse así:
+
+sprinkling.py
+        ↓
+causet_graph.py
+        ↓
+flrw.py
+        ↓
+wightman.py
+        ↓
+unruh_dewitt.qs
+        ↓
+entanglement_harvesting.qs
+
+donde cada nivel responde una pregunta distinta:
+
+¿De qué está hecho el espacio-tiempo?
+                ↓
+¿Cómo emerge la causalidad?
+                ↓
+¿Cómo aparece la geometría?
+                ↓
+¿Cómo fluctúa el vacío?
+                ↓
+¿Qué detecta un observador?
+                ↓
+¿Qué información contiene el vacío?
+
+
+
